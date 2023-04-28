@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RiMenu4Line, RiCloseFill } from "react-icons/ri";
+import Logo from "../assets/logo-trifinance.png";
 
 const Navbar = () => {
     //*NavMenu Function
@@ -36,23 +37,40 @@ const Navbar = () => {
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-600"></span>
                 </a>
             </nav>
-            <div className="block md:hidden" onClick={handleNav}>
-                {!nav ? <RiMenu4Line className="animate-pulse" size={40} /> : <RiCloseFill className="animate-pulse" size={40} />}
+            <div className="z-40  block md:hidden relative text-[#00df9a]" onClick={handleNav}>
+                {!nav ? (
+                    <RiMenu4Line className="animate-pulse fixed top-0 right-0 m-4" size={40} />
+                ) : (
+                    <RiCloseFill className="animate-pulse fixed top-0 right-0 m-4" size={40} />
+                )}
             </div>
             <div
                 className={
                     !nav
-                        ? "bg-black/40 backdrop-blur-md h-full fixed left-[-150%] top-0 w-[60%] border-r border-r-gray-900  ease-in-out duration-500"
-                        : "bg-black/40 backdrop-blur-md h-full fixed left-0 top-0 w-[60%] border-r border-r-gray-900  ease-in-out duration-500"
+                        ? "z-40 md:hidden bg-black/40 backdrop-blur-md h-full fixed left-[-150%] top-0 w-[60%] border-r border-r-gray-900  ease-in-out duration-500"
+                        : "z-40 md:hidden bg-black/40 backdrop-blur-md h-full fixed left-0 top-0 w-[60%] border-r border-r-gray-900  ease-in-out duration-500"
                 }
             >
-                <h1 className="w-full text-3xl font-bold text-green-400 m-4">REACT.</h1>
+                {/* <img className="p-5 mx-auto" src={Logo} alt="/" width={150} /> */}
+                <h1 className="p-6 w-full mx-auto text-5xl font-bold text-[#00df9a]">
+                    Tri<span className="w-full text-1xl font-bold text-white"> Finances</span>
+                </h1>
                 <div className="uppercase p-4 flex flex-col">
-                    <a className="p-4 border-b border-gray-600">Home</a>
-                    <a className="p-4 border-b border-gray-600">Company</a>
-                    <a className="p-4 border-b border-gray-600">Resources</a>
-                    <a className="p-4 border-b border-gray-600">About</a>
-                    <a className="p-4">Contact</a>
+                    <a href="#" className="p-4 border-b border-gray-600">
+                        Home
+                    </a>
+                    <a href="#" className="p-4 border-b border-gray-600">
+                        Company
+                    </a>
+                    <a href="#" className="p-4 border-b border-gray-600">
+                        Resources
+                    </a>
+                    <a href="#" className="p-4 border-b border-gray-600">
+                        About
+                    </a>
+                    <a href="#" className="p-4">
+                        Contact
+                    </a>
                 </div>
             </div>
         </div>

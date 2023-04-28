@@ -2,8 +2,11 @@ import { RiFacebookBoxFill, RiInstagramLine, RiGithubFill, RiLinkedinBoxFill, Ri
 
 const Footer = () => {
     return (
-        <footer className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-400">
-            <div className="p-3 text-center md:text-start">
+        <footer className="max-w-[1240px] mx-auto py-16 px-4  md:grid-cols-2 grid lg:grid-cols-3 gap-8 text-gray-400">
+            <div
+                className="p-3 text-center md:text-start col-span-3  md:col-span-3 lg:col-span-1
+            "
+            >
                 <h1 className="w-full text-5xl font-bold text-[#00df9a]">
                     Tri<span className="w-full text-3xl font-bold text-white"> Finances</span>
                 </h1>
@@ -26,7 +29,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <div className="lg:col-span-2 flex justify-between mt-6  p-4">
+            <div className="col-span-3 lg:col-span-2 flex justify-between mt-6  p-4 ">
                 <div>
                     <h6 className="font-medium text-gray-300">Support</h6>
                     <ul>
@@ -81,14 +84,14 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="w-full text-lg mx-auto col-span-3 justify-center text-center">
+            <div className="w-full text-[12px] md:text-lg mx-auto col-span-3 justify-center text-center">
                 <span className="flex justify-center">
                     &copy; Copyright 2023 All rights reserved
                     <a className=" font-bold text-[#00df9a] mx-2">
                         Tri <span className=" font-meddium text-white"> Finance </span>
                     </a>
                     and Caraota
-                    <RiBitCoinFill className="mx-2 text-yellow-500 mt-1" size={25} />
+                    <RiBitCoinFill className="mx-2 text-yellow-500 mt-0 md:mt-1" size={25} />
                     Coin
                 </span>
             </div>
